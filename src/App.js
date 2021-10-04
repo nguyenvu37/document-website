@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.scss';
+import { Footer } from './components/Footer';
+import Header from './components/Header';
+import Loading from './components/Loading';
+import routes from './router';
 
 function App() {
+  const NotProtected = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={(props) => {
+        return (document.title = rest.title) && <Component {...props} />;
+      }}
+    />
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense
+      fallback={
+        <Loading custom={{ position: 'relative', top: '50%', left: '50%' }} />
+      }
+    >
+      <Router>
+        <Header />
+        <Switch>
+          {routes.map((route, i) => {
+            const component = lazy(() => import(`${route.component}`));
+            return (
+              <NotProtected
+                key={'routes' + i}
+                exact
+                title={route.title}
+                path={route.path}
+                component={component}
+              />
+            );
+          })}
+        </Switch>
+        <Footer />
+      </Router>
+    </Suspense>
   );
 }
 
