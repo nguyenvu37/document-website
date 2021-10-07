@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Footer/_styles.scss"],"names":[],"mappings":"AAAA,QACE,cAAe,CADjB,mBAII,eAAgB","file":"17.43159080.chunk.css","sourcesContent":[".footer {\n  padding: 10px 0;\n\n  .copyright {\n    margin-bottom: 0;\n  }\n}\n"]}

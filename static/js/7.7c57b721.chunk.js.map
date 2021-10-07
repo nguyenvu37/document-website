@@ -1,0 +1,1 @@
+{"version":3,"sources":["screens/thematic/containers/index.js"],"names":["TheMatic","className"],"mappings":"yHAAA,uBAMeA,UAJE,WACf,OAAO,qBAAKC,UAAU,OAAf","file":"static/js/7.7c57b721.chunk.js","sourcesContent":["import React from 'react';\n\nconst TheMatic = () => {\n  return <div className=\"main\">Chuyên đề</div>;\n};\n\nexport default TheMatic;\n"],"sourceRoot":""}
