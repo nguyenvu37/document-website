@@ -1,0 +1,26 @@
+@import 'src/styles/variables';
+
+.search-input {
+  &__label {
+    background-color: $bg-stability;
+    padding: 10px 20px;
+    margin: 10px 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background-color: $bg-tomato;
+    }
+
+    p {
+      text-transform: uppercase;
+      font-size: $base;
+      font-weight: $bold;
+    }
+  }
+}

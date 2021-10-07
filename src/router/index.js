@@ -1,13 +1,13 @@
 const router = [
   {
     title: 'Trang chủ Tài liệu học tập',
-    component: './screens/home',
+    component: './screens/home/containers/homeContainer',
     path: '/',
     isProtected: false,
   },
   {
     title: 'Chuyên đề',
-    component: './screens/thematic',
+    component: './screens/thematic/containers',
     path: '/chuyen-de',
     isProtected: false,
   },

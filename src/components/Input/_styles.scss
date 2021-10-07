@@ -1,0 +1,95 @@
+@import '/src/styles/variables';
+.input {
+  &__wrapper {
+    margin: 5px 0;
+    .input__label {
+      font-size: 12px;
+      font-weight: $medium;
+      line-height: 18px;
+      color: $color-black;
+      margin-bottom: 5px;
+      display: flex;
+    }
+
+    .input__box {
+      position: relative;
+      display: block;
+
+      &.left {
+        .input {
+          padding-left: 30px;
+        }
+      }
+
+      input {
+        border: 1px solid $gallery;
+        height: 40px;
+        display: block;
+        font-size: 14px;
+        padding: 10px;
+        color: $popup-txt;
+        letter-spacing: -0.28px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: $regular;
+        position: relative;
+
+        &::-webkit-input-placeholder {
+          color: $color-placeholder;
+          font-weight: $light;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: -0.38px;
+        }
+
+        &::placeholder {
+          color: $color-placeholder;
+          font-weight: $light;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: -0.38px;
+        }
+
+        &::-moz-placeholder {
+          color: $color-placeholder;
+          font-weight: $light;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: -0.38px;
+        }
+
+        &:-ms-input-placeholder {
+          color: $color-placeholder;
+          font-weight: $light;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: -0.38px;
+        }
+
+        &:focus {
+          border: 1px solid $blue-2;
+          outline: none;
+        }
+      }
+
+      .icon-close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}

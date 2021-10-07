@@ -4,6 +4,8 @@
 
 // components
 @import './components/Header/styles';
+@import './components//Footer/styles';
+@import './components/Input/styles';
 
 // home
-@import './screens/home/styles';
+@import './screens/home/containers/styles';

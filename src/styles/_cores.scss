@@ -1,3 +1,5 @@
+@import './variables';
+
 body {
   display: flex;
   flex-direction: column;
@@ -109,4 +111,31 @@ body {
 .container-fluid {
   padding-right: 0 !important;
   padding-left: 0 !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+.title {
+  background-color: $bg-stability;
+  padding: 10px 20px;
+  margin: 10px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: $bg-tomato;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: $base;
+    font-weight: $bold;
+  }
 }
