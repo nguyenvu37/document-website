@@ -1,3 +1,9 @@
 //Input
 @import './styles/variables';
 @import './styles/cores';
+
+// components
+@import './components/Header/styles';
+
+// home
+@import './screens/home/styles';

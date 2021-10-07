@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TheMatic = () => {
-  return <div>Chuyên đề</div>;
+  return <div className="main">Chuyên đề</div>;
 };
 
 export default TheMatic;
